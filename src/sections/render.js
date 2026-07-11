@@ -82,7 +82,7 @@ export function renderHero() {
               آنلاین
             </div>
             <div class="w-full aspect-square rounded-2xl bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500 flex items-center justify-center shadow-lg shadow-primary-500/30">
-              <span class="text-white text-7xl font-black select-none">${profile.name.charAt(0)}</span>
+              <img src="/photo_H.jpg" alt="Profile" class="w-full h-full object-cover rounded-2xl"/>
             </div>
             <div class="mt-5 text-center">
               <p class="font-bold text-lg text-slate-900 dark:text-white">${profile.name}</p>
@@ -99,6 +99,7 @@ export function renderHero() {
   `;
 }
 
+//<span class="text-white text-7xl font-black select-none">${profile.name.charAt(0)}</span>
 export function renderSkills() {
    const section = document.getElementById("skills");
    const tagsHtml = skillTags.map((tag, i) => `<span class="skill-tag reveal" style="transition-delay:${i * 40}ms">${tag}</span>`).join("");
