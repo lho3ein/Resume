@@ -5,7 +5,7 @@ export const profile = {
    email: "lho3ein81@gmail.com",
    github: "https://github.com/lho3ein",
    linkedin: "https://www.linkedin.com/in/lho3ein",
-   resumeUrl: "/public/resume-HosseinKhalili.pdf",
+   resumeUrl: "/resume-HosseinKhalili.pdf",
    avatar: null,
    typewriterTexts: ["توسعه‌دهنده فرانت‌اند", "طراح رابط کاربری مدرن", "برنامه نویس React"],
    //  bio: "سلام! من حسین خلیلی هستم، توسعه‌دهنده فرانت‌اند با تخصص در React و Next.js. علاقه‌مند به ایجاد رابط‌های کاربری مدرن و تجربه‌های وب تعاملی هستم. هدف من ارائه راه‌حل‌های خلاقانه و بهینه برای کاربران است.",
