@@ -184,7 +184,7 @@ export function renderProjects() {
             <div class="flex flex-wrap gap-1.5 mb-3">
               ${project.tags.map((t) => `<span class="text-xs px-2 py-0.5 rounded-md bg-white/15 text-white/90">${t}</span>`).join("")}
             </div>
-            <a href="${project.link}" class="inline-flex items-center gap-1.5 text-sm font-medium text-white/90 hover:text-white transition-all duration-300">
+            <a href="${project.link}" class="inline-flex items-center gap-1.5 text-sm font-medium text-white/90 hover:text-white transition-all duration-300" target="_blank" rel="noopener noreferrer">
               مشاهده ${icons.externalLink}
             </a>
           </div>

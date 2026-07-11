@@ -62,25 +62,18 @@ function projectImage(title, color1, color2) {
 
 export const projects = [
    {
-      title: "سامانه مدیریت وظایف",
-      description: "ابزاری برای مدیریت پروژه با قابلیت کشیدن و رها کردن کارت‌ها، همگام‌سازی لحظه‌ای و کار آفلاین.",
-      image: projectImage("مدیریت وظایف", "#444ce7", "#0ea5e9"),
-      tags: ["React", "TypeScript", "IndexedDB"],
-      link: "#",
+      title: "سیستم احراز هویت",
+      description: "سیستم احراز هویت Full-stack که قابلیت ثبت نام کاربر جدید و ورود را دارد و به دیتابیس متصل است و قابلیت ورود با Github و Google را دارد",
+      image: projectImage("سیستم احراز هویت", "#7c3aed", "#db2777"),
+      tags: ["Next.js", "Auth.js", "TypeScript", "Prisma"],
+      link: "https://github.com/lho3ein/",
    },
    {
-      title: "فروشگاه اینترنتی",
+      title: "پنل مدیریت MVP",
       description: "فروشگاه آنلاین با سبد خرید، درگاه پرداخت و پنل مدیریت کامل برای فروشندگان.",
-      image: projectImage("فروشگاه آنلاین", "#7c3aed", "#db2777"),
-      tags: ["Next.js", "Stripe", "Prisma"],
-      link: "#",
-   },
-   {
-      title: "داشبورد گزارش‌گیری",
-      description: "نمایش آمار و نمودارهای زنده با فیلترهای پیشرفته برای تحلیل داده‌های کسب‌وکار.",
-      image: projectImage("داشبورد تحلیلی", "#0284c7", "#059669"),
-      tags: ["Vue 3", "D3.js", "WebSocket"],
-      link: "#",
+      image: projectImage("MVP پنل مدیریت", "#0284c7", "#059669"),
+      tags: ["Next.js", "TypeScript", "React-Query", "Shadcn", "Prisma"],
+      link: "https://github.com/lho3ein/",
    },
    {
       title: "رزومه آنلاین",
@@ -89,4 +82,25 @@ export const projects = [
       tags: ["Vite", "Tailwind", "Vanilla JS"],
       link: "#",
    },
+   {
+      title: "دفترچه تلفن",
+      description: "ابزاری برای مدیریت پروژه با قابلیت کشیدن و رها کردن کارت‌ها، همگام‌سازی لحظه‌ای و کار آفلاین.",
+      image: projectImage("دفترچه تلفن", "#444ce7", "#0ea5e9"),
+      tags: ["Next.js", "TypeScript", "Shadcn Ui"],
+      link: "https://contact-app-pink-one.vercel.app/contact",
+   },
+   // {
+   //    title: "فروشگاه آنلاین",
+   //    description: "فروشگاه آنلاین با سبد خرید، درگاه پرداخت و پنل مدیریت کامل برای فروشندگان.",
+   //    image: projectImage("فروشگاه آنلاین", "#0284c7", "#059669"),
+   //    tags: ["Next.js", "TypeScript", "React-Query", "Shadcn", "Prisma"],
+   //    link: "https://github.com/lho3ein/",
+   // },
+   // {
+   //    title: "داشبورد گزارش‌گیری",
+   //    description: "نمایش آمار و نمودارهای زنده با فیلترهای پیشرفته برای تحلیل داده‌های کسب‌وکار.",
+   //    image: projectImage("داشبورد تحلیلی", "#0284c7", "#059669"),
+   //    tags: ["Vue 3", "D3.js", "WebSocket"],
+   //    link: "#",
+   // },
 ];
