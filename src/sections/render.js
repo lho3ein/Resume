@@ -3,8 +3,10 @@ import { profile, navItems, skillTags, skillBars, experiences, projects } from "
 
 export function renderNavigation() {
    const logo = document.getElementById("nav-logo");
-   logo.innerHTML = `${icons.logo}<span>حسین.dev</span>`;
-
+   logo.innerHTML = `${icons.logoNh}`;
+   const logoDark = document.getElementById("nav-logo-dark");
+   logoDark.innerHTML = `${icons.logoNhDrk}`;
+   // <span>حسین.dev</span>
    const navLinks = document.getElementById("nav-links");
    const mobileNavLinks = document.getElementById("mobile-nav-links");
 
@@ -185,7 +187,7 @@ export function renderProjects() {
             <div class="flex flex-wrap gap-1.5 mb-3">
               ${project.tags.map((t) => `<span class="text-xs px-2 py-0.5 rounded-md bg-white/15 text-white/90">${t}</span>`).join("")}
             </div>
-            <a href="${project.link}" class="inline-flex items-center gap-1.5 text-sm font-medium text-white/90 hover:text-white transition-all duration-300" target="_blank" rel="noopener noreferrer">
+            <a href="${project.link}" class="inline-flex items-center gap-1.5 text-sm font-medium text-white/90 hover:text-white transition-all duration-300" target="${project.blank ? "_blank" : "_self"}" rel="noopener noreferrer">
               مشاهده ${icons.externalLink}
             </a>
           </div>

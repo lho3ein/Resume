@@ -67,6 +67,7 @@ export const projects = [
       image: projectImage("سیستم احراز هویت", "#7c3aed", "#db2777"),
       tags: ["Next.js", "Auth.js", "TypeScript", "Prisma"],
       link: "https://github.com/lho3ein/",
+      blank: true,
    },
    {
       title: "پنل مدیریت MVP",
@@ -74,6 +75,7 @@ export const projects = [
       image: projectImage("MVP پنل مدیریت", "#0284c7", "#059669"),
       tags: ["Next.js", "TypeScript", "React-Query", "Shadcn", "Prisma"],
       link: "https://github.com/lho3ein/",
+      blank: true,
    },
    {
       title: "رزومه آنلاین",
@@ -81,14 +83,15 @@ export const projects = [
       image: projectImage("رزومه آنلاین", "#d97706", "#dc2626"),
       tags: ["Vite", "Tailwind", "Vanilla JS"],
       link: "#",
+      blank: false,
    },
-   {
-      title: "دفترچه تلفن",
-      description: "ابزاری برای مدیریت پروژه با قابلیت کشیدن و رها کردن کارت‌ها، همگام‌سازی لحظه‌ای و کار آفلاین.",
-      image: projectImage("دفترچه تلفن", "#444ce7", "#0ea5e9"),
-      tags: ["Next.js", "TypeScript", "Shadcn Ui"],
-      link: "https://contact-app-pink-one.vercel.app/contact",
-   },
+   // {
+   //    title: "دفترچه تلفن",
+   //    description: "ابزاری برای مدیریت پروژه با قابلیت کشیدن و رها کردن کارت‌ها، همگام‌سازی لحظه‌ای و کار آفلاین.",
+   //    image: projectImage("دفترچه تلفن", "#444ce7", "#0ea5e9"),
+   //    tags: ["Next.js", "TypeScript", "Shadcn Ui"],
+   //    link: "https://contact-app-pink-one.vercel.app/contact",
+   // },
    // {
    //    title: "فروشگاه آنلاین",
    //    description: "فروشگاه آنلاین با سبد خرید، درگاه پرداخت و پنل مدیریت کامل برای فروشندگان.",
