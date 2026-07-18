@@ -55,7 +55,7 @@ export function renderHero() {
 
         <div class="hero-item hero-delay-5 grid grid-cols-3 gap-2 sm:gap-3 max-w-md mb-8 min-w-0">
           <div class="stat-card">
-            <div class="stat-value">+۲</div>
+            <div class="stat-value">+۵</div>
             <div class="stat-label">سال سابقه</div>
           </div>
           <div class="stat-card">
@@ -100,8 +100,8 @@ export function renderHero() {
     </div>
   `;
 }
-
 //<span class="text-white text-7xl font-black select-none">${profile.name.charAt(0)}</span>
+
 export function renderSkills() {
    const section = document.getElementById("skills");
    const tagsHtml = skillTags.map((tag, i) => `<span class="skill-tag reveal" style="transition-delay:${i * 40}ms">${tag}</span>`).join("");
@@ -218,17 +218,21 @@ export function renderContact() {
       <div class="relative">
         <div class="section-badge mx-auto">تماس</div>
         <h2 class="section-title mb-3">همکاری کنیم؟</h2>
-        <p class="section-subtitle !mb-8 mx-auto">اگر پروژه‌ای دارید یا به دنبال نیروی فرانت‌اند هستید، خوشحال می‌شوم باهاتون صحبت کنم.</p>
+        <p class="section-subtitle !mb-8 mx-auto">اگر پروژه‌ای دارید یا به دنبال نیروی فرانت‌اند هستید، خوشحال می‌شوم باهاتون همکاری کنم.</p>
         <div class="flex flex-wrap justify-center gap-3">
-          <a href="mailto:${profile.email}" class="btn-primary">${icons.mail} ارسال ایمیل</a>
+          <a href="tel:09364804902" class="btn-primary">${icons.phone} تماس با من</a>
           <a href="${profile.linkedin}" target="_blank" rel="noopener noreferrer" class="btn-outline">${icons.linkedin} لینکدین</a>
         </div>
-        <p class="section-subtitle !mt-8 mx-auto">یا تماس با شماره 09364804902</p>
+        <p class="section-subtitle !mt-8 mx-auto my-auto">یا ارسال ایمیل به <a href="mailto:${profile.email}" class="w-full hover:underline">lho3ein81@gmail.com</a></p>
       </div>
     </div>
   `;
 }
-
+{
+   // <button class="btn-primary" onclick="window.location.href='tel:09364804902'">${icons.phone} تماس با من</button>
+   // <a href="tel:+989364804902" class="btn-primary">${icons.phone} تماس با من</a>
+   /* <a href="mailto:${profile.email}" class="btn-primary">${icons.mail} ارسال ایمیل</a> */
+}
 export function renderFooter() {
    const footer = document.getElementById("footer");
    const year = new Date().getFullYear();

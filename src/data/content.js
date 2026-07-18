@@ -8,8 +8,10 @@ export const profile = {
    resumeUrl: "/resume-HosseinKhalili.pdf",
    avatar: null,
    typewriterTexts: ["توسعه‌دهنده فرانت‌اند", "طراح رابط کاربری مدرن", "برنامه نویس React"],
+   bio: "حسین خلیلی هستم، دانشجوی کارشناسی ارشد مهندسی کامپیوتر در رشته نرم افزار که بیشتر از 5 سال هست در زمینه برنامه نویسی وب فعالیت می کنم. سابقه تدریس در دوره های حضوری، همچنین فعالیت به عنوان برنامه نویس در شرکت ها و موسسات مختلف را دارم.",
+   // bio2: "سابقه تدریس در دوره های حضوری، همچنین فعالیت به عنوان برنامه نویس در شرکت ها و موسسات مختلف را دارم.",
    //  bio: "سلام! من حسین خلیلی هستم، توسعه‌دهنده فرانت‌اند با تخصص در React و Next.js. علاقه‌مند به ایجاد رابط‌های کاربری مدرن و تجربه‌های وب تعاملی هستم. هدف من ارائه راه‌حل‌های خلاقانه و بهینه برای کاربران است.",
-   bio: "من یک Front-End Developer هستم که علاقه زیادی به ساخت رابط‌های کاربری زیبا، سریع و کاربردی دارم. در مسیر یادگیری و توسعه مهارت‌هایم چندین پروژه عملی انجام داده‌ام و تجربه همکاری در چند محیط کاری را داشته‌ام.",
+   // bio: "من یک Front-End Developer هستم که علاقه زیادی به ساخت رابط‌های کاربری زیبا، سریع و کاربردی دارم. در مسیر یادگیری و توسعه مهارت‌هایم چندین پروژه عملی انجام داده‌ام و تجربه همکاری در چند محیط کاری را داشته‌ام.",
 };
 
 export const navItems = [
@@ -20,7 +22,7 @@ export const navItems = [
    { id: "contact", label: "تماس" },
 ];
 
-export const skillTags = ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "Vite", "Git", "Figma", "REST API"];
+export const skillTags = ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "ShadcnUI", "Figma", "React-Query", "Next.js App Router", "SSR-CSR", "REST API", "Postman", "Vite", "Git"];
 
 export const skillBars = [
    { name: "توسعه فرانت‌اند", level: 92 },
