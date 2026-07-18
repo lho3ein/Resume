@@ -84,7 +84,7 @@ export function renderHero() {
               آنلاین
             </div>
             <div class="w-full aspect-square rounded-2xl bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500 flex items-center justify-center shadow-lg shadow-primary-500/30">
-              <img src="/photo_H.jpg" alt="Profile" class="w-full h-full object-cover rounded-2xl"/>
+              <img src="/photo_H2.jpg" alt="Profile" class="w-full h-full object-cover rounded-2xl"/>
             </div>
             <div class="mt-5 text-center">
               <p class="font-bold text-lg text-slate-900 dark:text-white">${profile.name}</p>
