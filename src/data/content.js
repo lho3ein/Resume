@@ -22,7 +22,7 @@ export const navItems = [
    { id: "contact", label: "تماس" },
 ];
 
-export const skillTags = ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "ShadcnUI", "Figma", "React-Query", "Next.js App Router", "SSR-CSR", "REST API", "Postman", "Vite", "Git"];
+export const skillTags = ["HTML5", "CSS3", "JavaScript", "TypeScript", "React", "Next.js", "Tailwind CSS", "ShadcnUI", "Figma", "Git", "React-Query", "SSR-CSR", "REST API", "Postman"];
 
 export const skillBars = [
    { name: "توسعه فرانت‌اند", level: 92 },
