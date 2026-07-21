@@ -223,7 +223,8 @@ export function renderContact() {
           <a href="tel:09364804902" class="btn-primary">${icons.phone} تماس با من</a>
           <a href="${profile.linkedin}" target="_blank" rel="noopener noreferrer" class="btn-outline">${icons.linkedin} لینکدین</a>
         </div>
-        <p class="section-subtitle !mt-8 mx-auto my-auto">یا ارسال ایمیل به <a href="mailto:${profile.email}" class="w-full hover:underline">lho3ein81@gmail.com</a></p>
+        <p class="section-subtitle !mt-8 mx-auto my-auto">آیدی تلگرام : <a href="https://t.me/lho3ein1" class="w-full hover:underline" target="_blank" rel="noopener noreferrer">lho3ein1</a></p>
+        <p class="section-subtitle !mt-4 mx-auto my-auto">یا ارسال ایمیل به <a href="mailto:${profile.email}" class="w-full hover:underline">lho3ein81@gmail.com</a></p>
       </div>
     </div>
   `;
