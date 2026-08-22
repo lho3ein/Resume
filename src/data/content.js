@@ -55,17 +55,24 @@ export const skillBars = [
 export const experiences = [
   {
     period: "۱۴۰۴ — ۱۴۰۵",
-    role: "توسعه‌دهنده فرانت‌اند",
-    company: "تیم الگوریتا",
-    // description: "طراحی سیستم طراحی یکپارچه و کاهش چهل درصد زمان بارگذاری صفحات با استفاده از nextjs.",
+    role: "Front-End Developer (Nextjs)",
+    company: "Algoritha Team",
+    description:
+      "طراحی سیستم طراحی یکپارچه و کاهش چهل درصد زمان بارگذاری صفحات با استفاده از nextjs.",
+    tags: ["React", "Nextjs", "TypeScript", "Tailwind"],
+  },
+  {
+    period: "۱۴۰۲ — ۱۴۰۴",
+    role: "Front-End Developer (Reactjs)",
+    company: "Nexora Technologist",
     description:
       "ساخت داشبورد مدیریتی،اتصال به APIهای بک‌اند، پیاده‌سازی و همکاری نزدیک با تیم طراحی برای بهبود تجربه کاربری.",
-    tags: ["React", "Next", "TypeScript", "Tailwind"],
+    tags: ["Nextjs", "React", "TypeScript", "Zustand"],
   },
   {
     period: "۱۴۰۱ — ۱۴۰۲",
-    role: "شرکت Emrc",
-    company: "ورود اطلاعات",
+    role: "Information Form",
+    company: "Emrc Company",
     description: "همکاری نزدیک با تیم فنی برای بهبود کیفیت فنی برنامه",
     tags: ["Form Security"],
   },
@@ -103,10 +110,19 @@ export const projects = [
     blank: true,
   },
   {
+    title: "فروشگاه آنلاین",
+    description:
+      "فروشگاه آنلاین با سبد خرید، درگاه پرداخت و پنل مدیریت کامل برای فروشندگان.",
+    image: projectImage("فروشگاه آنلاین", "#7c3aed", "#db2777"),
+    tags: ["Next.js", "TypeScript", "React-Query", "Shadcn", "Prisma"],
+    link: "https://github.com/lho3ein/",
+  },
+  {
     title: "رزومه آنلاین",
     description:
       "پورتفولیوی شخصی تعاملی با انیمیشن‌های روان، تم تاریک و روشن و طراحی واکنش‌گرا.",
-    image: projectImage("رزومه آنلاین", "#7c3aed", "#db2777"),
+    image: "/Resume-pic.webp",
+    // image: projectImage("رزومه آنلاین", "#7c3aed", "#db2777"),
     tags: ["Vite", "Tailwind", "Vanilla JS"],
     link: "#",
     blank: false,
@@ -118,13 +134,7 @@ export const projects = [
   //    tags: ["Next.js", "TypeScript", "Shadcn Ui"],
   //    link: "https://contact-app-pink-one.vercel.app/contact",
   // },
-  // {
-  //    title: "فروشگاه آنلاین",
-  //    description: "فروشگاه آنلاین با سبد خرید، درگاه پرداخت و پنل مدیریت کامل برای فروشندگان.",
-  //    image: projectImage("فروشگاه آنلاین", "#0284c7", "#059669"),
-  //    tags: ["Next.js", "TypeScript", "React-Query", "Shadcn", "Prisma"],
-  //    link: "https://github.com/lho3ein/",
-  // },
+
   // {
   //    title: "داشبورد گزارش‌گیری",
   //    description: "نمایش آمار و نمودارهای زنده با فیلترهای پیشرفته برای تحلیل داده‌های کسب‌وکار.",
