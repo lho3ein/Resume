@@ -78,36 +78,21 @@ export const experiences = [
   },
 ];
 
-function projectImage(title, color1, color2) {
-  return (
-    "data:image/svg+xml," +
-    encodeURIComponent(
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="400"
-        height="240"
-        viewBox="0 0 400 240"
-      >
-        <defs>
-          <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color={color1} />
-            <stop offset="100%" stop-color={color2} />
-          </linearGradient>
-        </defs>
-        <rect fill="url(#g)" width="400" height="240" />
-        <text
-          x="200"
-          y="125"
-          text-anchor="middle"
-          fill="white"
-          font-family="Vazirmatn, Tahoma, sans-serif"
-          font-size="20"
-        >
-          {title}
-        </text>
-      </svg>,
-    )
-  );
+function projectImage(title: string, color1: string, color2: string) {
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240">
+      <defs>
+        <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="${color1}" />
+          <stop offset="100%" stop-color="${color2}" />
+        </linearGradient>
+      </defs>
+      <rect fill="url(#g)" width="400" height="240" />
+      <text x="200" y="125" text-anchor="middle" fill="white" font-family="Vazirmatn, Tahoma, sans-serif" font-size="20">${title}</text>
+    </svg>
+  `;
+
+  return "data:image/svg+xml," + encodeURIComponent(svg);
 }
 
 export const projects = [

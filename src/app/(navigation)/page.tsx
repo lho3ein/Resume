@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { icons } from "@/app/feature/icons";
 import {
   profile,
@@ -10,6 +11,7 @@ import {
   experiences,
   projects,
 } from "@/app/feature/content";
+import ThemeButton from "../feature/theme-button";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -18,26 +20,26 @@ export default function Home() {
      Theme
   ───────────────────────────────────────── */
 
-  const [theme, setTheme] = useState<"dark" | "light">(() => {
-    if (typeof window === "undefined") return "light";
-    const stored = localStorage.getItem("resume-theme");
-    if (stored === "dark" || stored === "light") return stored;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-  });
+  // const [theme, setTheme] = useState<"dark" | "light">(() => {
+  //   if (typeof window === "undefined") return "light";
+  //   const stored = localStorage.getItem("resume-theme");
+  //   if (stored === "dark" || stored === "light") return stored;
+  //   return window.matchMedia("(prefers-color-scheme: dark)").matches
+  //     ? "dark"
+  //     : "light";
+  // });
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
+  // useEffect(() => {
+  //   document.documentElement.classList.toggle("dark", theme === "dark");
 
-    document.documentElement.style.setProperty("color-scheme", theme);
+  //   document.documentElement.style.setProperty("color-scheme", theme);
 
-    localStorage.setItem("resume-theme", theme);
-  }, [theme]);
+  //   localStorage.setItem("resume-theme", theme);
+  // }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme((current) => (current === "dark" ? "light" : "dark"));
-  };
+  // const toggleTheme = () => {
+  //   setTheme((current) => (current === "dark" ? "light" : "dark"));
+  // };
 
   /* ─────────────────────────────────────────
      Mobile Menu
@@ -345,7 +347,7 @@ export default function Home() {
                 <a
                   href={item.id}
                   className={`nav-link ${
-                    activeSection === item.id ? "nav-link-active" : ""
+                    activeSection === item.id.slice(1) ? "nav-link-active" : ""
                   }`}
                   data-section={item.id}
                   onClick={(e) => handleNavClick(e, item.id)}
@@ -359,15 +361,7 @@ export default function Home() {
           <div className="flex items-center gap-2 shrink-0">
             {/* Theme Button */}
 
-            <button
-              id="theme-toggle"
-              type="button"
-              className="icon-btn"
-              aria-label="تغییر تم"
-              onClick={toggleTheme}
-            >
-              {theme === "dark" ? icons.sun : icons.moon}
-            </button>
+            <ThemeButton />
 
             {/* Mobile Menu Button */}
 
@@ -398,7 +392,7 @@ export default function Home() {
                 <a
                   href={item.id}
                   className={`block nav-link ${
-                    activeSection === item.id ? "nav-link-active" : ""
+                    activeSection === item.id.slice(1) ? "nav-link-active" : ""
                   }`}
                   data-section={item.id}
                   onClick={(e) => handleNavClick(e, item.id)}
@@ -441,7 +435,7 @@ export default function Home() {
                 {profile.name}
               </h1>
 
-              <p className="hero-item hero-delay-3 text-xl sm:text-2xl font-semibold text-slate-600 dark:text-slate-300 mb-6 min-h-[2.5rem] break-words">
+              <p className="hero-item hero-delay-3 text-xl sm:text-2xl font-semibold text-slate-600 dark:text-slate-300 mb-6 min-h-10 wrap-break-word">
                 <span
                   id="typewriter"
                   className="typewriter-cursor gradient-text"
@@ -450,7 +444,7 @@ export default function Home() {
                 </span>
               </p>
 
-              <p className="hero-item hero-delay-3 text-slate-500 dark:text-slate-400 text-base sm:text-lg leading-[1.9] mb-8 max-w-lg">
+              <p className="hero-item hero-delay-3 text-slate-500 dark:text-slate-400 text-base sm:text-lg leading-[1.6] mb-8 max-w-lg">
                 {profile.bio}
               </p>
 
@@ -515,16 +509,18 @@ export default function Home() {
             <div className="flex justify-center order-1 w-full min-w-0 hero-item hero-delay-3 lg:order-2 lg:justify-end">
               <div className="profile-wrap">
                 <div className="profile-ring" />
-                <div className="relative glass-card p-6 w-full max-w-[260px] sm:max-w-[280px] mx-auto shadow-card">
+                <div className="relative glass-card p-6 w-full max-w-65 sm:max-w-70 mx-auto shadow-card">
                   <div className="status-badge">
                     <span className="status-dot" />
                     آنلاین
                   </div>
 
-                  <div className="flex items-center justify-center w-full shadow-lg aspect-square rounded-2xl bg-gradient-to-br from-primary-500 via-primary-600 to-accent-500 shadow-primary-500/30">
-                    <img
+                  <div className="flex items-center justify-center w-full shadow-lg aspect-square rounded-2xl bg-linear-to-br from-primary-500 via-primary-600 to-accent-500 shadow-primary-500/30">
+                    <Image
                       src="/photo_H2.webp"
                       alt="Profile"
+                      width={260}
+                      height={260}
                       className="object-cover w-full h-full rounded-2xl"
                     />
                   </div>
@@ -544,7 +540,7 @@ export default function Home() {
                       href={profile.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="icon-btn !p-2"
+                      className="icon-btn p-2!"
                       aria-label="گیت‌هاب"
                     >
                       {icons.github}
@@ -554,7 +550,7 @@ export default function Home() {
                       href={profile.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="icon-btn !p-2"
+                      className="icon-btn p-2!"
                       aria-label="لینکدین"
                     >
                       {icons.linkedin}
@@ -848,11 +844,12 @@ export default function Home() {
                   }}
                 >
                   <div className="project-image-wrap">
-                    <img
+                    <Image
                       src={project.image}
                       alt={project.title}
+                      width={400}
+                      height={208}
                       className="project-image"
-                      loading="lazy"
                     />
 
                     <div className="project-overlay">
@@ -922,13 +919,13 @@ export default function Home() {
               isRevealed("contact") ? "visible" : ""
             }`}
           >
-            <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-primary-500/5 to-accent-500/5" />
+            <div className="absolute inset-0 pointer-events-none bg-linear-to-br from-primary-500/5 to-accent-500/5" />
 
             <div className="relative">
               <div className="mx-auto section-badge">تماس</div>
 
               <h2 className="mb-3 section-title">همکاری کنیم؟</h2>
-              <p className="section-subtitle !mb-8 mx-auto">
+              <p className="section-subtitle mb-8! mx-auto">
                 اگر پروژه‌ای دارید یا به دنبال نیروی فرانت‌اند هستید، خوشحال
                 می‌شوم باهاتون همکاری کنم.
               </p>
@@ -950,7 +947,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <p className="section-subtitle !mt-8 mx-auto my-auto">
+              <p className="section-subtitle mt-8! mx-auto my-auto">
                 آیدی تلگرام :{" "}
                 <a
                   href="https://t.me/lho3ein1"
@@ -962,7 +959,7 @@ export default function Home() {
                 </a>
               </p>
 
-              <p className="section-subtitle !mt-4 mx-auto my-auto">
+              <p className="section-subtitle mt-4! mx-auto my-auto">
                 یا ارسال ایمیل به{" "}
                 <a
                   href={`mailto:${profile.email}`}

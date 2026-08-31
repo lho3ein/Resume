@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export const icons = {
   logo: (
     <svg
@@ -16,17 +18,21 @@ export const icons = {
   ),
 
   logoNh: (
-    <img
+    <Image
       src="/logoNhLightNoBgW3.webp"
       alt="Logo"
+      width={56}
+      height={28}
       className="inline-block w-14 h-7"
     />
   ),
 
   logoNhDrk: (
-    <img
+    <Image
       src="/logoNhDarkNoBgW3.webp"
       alt="Logo-dark"
+      width={56}
+      height={28}
       className="inline-block w-14 h-7"
     />
   ),
