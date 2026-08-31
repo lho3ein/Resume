@@ -12,6 +12,7 @@ import {
   projects,
 } from "@/app/feature/content";
 import ThemeButton from "../feature/theme-button";
+import Link from "next/link";
 
 export default function Home() {
   const year = new Date().getFullYear();
@@ -300,7 +301,7 @@ export default function Home() {
           className="flex items-center justify-between max-w-5xl gap-4 mx-auto nav-bar"
           aria-label="ناوبری اصلی"
         >
-          <a
+          <Link
             href="#hero"
             className="nav-logo shrink-0"
             onClick={(e) => handleNavClick(e, "#hero")}
@@ -312,14 +313,14 @@ export default function Home() {
             <span id="nav-logo-dark" className="hidden dark:block">
               {icons.logoNhDrk}
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
 
           <ul id="nav-links" className="hidden lg:flex items-center gap-0.5">
             {navItems.map((item, i) => (
               <li key={i}>
-                <a
+                <Link
                   href={item.id}
                   className={`nav-link ${
                     activeSection === item.id.slice(1) ? "nav-link-active" : ""
@@ -328,7 +329,7 @@ export default function Home() {
                   onClick={(e) => handleNavClick(e, item.id)}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -364,7 +365,7 @@ export default function Home() {
           <ul id="mobile-nav-links" className="flex flex-col p-2">
             {navItems.map((item, i) => (
               <li key={i}>
-                <a
+                <Link
                   href={item.id}
                   className={`block nav-link ${
                     activeSection === item.id.slice(1) ? "nav-link-active" : ""
@@ -373,7 +374,7 @@ export default function Home() {
                   onClick={(e) => handleNavClick(e, item.id)}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -424,7 +425,7 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-10 hero-item hero-delay-4">
-                <a
+                <Link
                   href={profile.resumeUrl}
                   download
                   className="btn-primary"
@@ -432,16 +433,16 @@ export default function Home() {
                 >
                   {icons.download}
                   دریافت رزومه
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href="#projects"
                   className="btn-outline"
                   onClick={(e) => handleNavClick(e, "#projects")}
                 >
                   {icons.layers}
                   دیدن نمونه‌کارها
-                </a>
+                </Link>
               </div>
 
               <div className="grid max-w-md min-w-0 grid-cols-3 gap-2 mb-8 hero-item hero-delay-5 sm:gap-3">
@@ -511,7 +512,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex justify-center gap-2 pt-4 mt-4 border-t border-slate-200/60 dark:border-slate-700/50">
-                    <a
+                    <Link
                       href={profile.github}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -519,9 +520,9 @@ export default function Home() {
                       aria-label="گیت‌هاب"
                     >
                       {icons.github}
-                    </a>
+                    </Link>
 
-                    <a
+                    <Link
                       href={profile.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -529,7 +530,7 @@ export default function Home() {
                       aria-label="لینکدین"
                     >
                       {icons.linkedin}
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -847,7 +848,7 @@ export default function Home() {
                         ))}
                       </div>
 
-                      <a
+                      <Link
                         href={project.link}
                         className="inline-flex items-center gap-1.5 text-sm font-medium text-white/90 hover:text-white transition-all duration-300"
                         target={project.blank ? "_blank" : "_self"}
@@ -855,7 +856,7 @@ export default function Home() {
                       >
                         مشاهده
                         {icons.externalLink}
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -906,12 +907,12 @@ export default function Home() {
               </p>
 
               <div className="flex flex-wrap justify-center gap-3">
-                <a href="tel:09364804902" className="btn-primary">
+                <Link href="tel:09364804902" className="btn-primary">
                   {icons.phone}
                   تماس با من
-                </a>
+                </Link>
 
-                <a
+                <Link
                   href={profile.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -919,29 +920,29 @@ export default function Home() {
                 >
                   {icons.linkedin}
                   لینکدین
-                </a>
+                </Link>
               </div>
 
               <p className="section-subtitle mt-8! mx-auto my-auto">
                 آیدی تلگرام :{" "}
-                <a
+                <Link
                   href="https://t.me/lho3ein1"
                   className="w-full hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   lho3ein1
-                </a>
+                </Link>
               </p>
 
               <p className="section-subtitle mt-4! mx-auto my-auto">
                 یا ارسال ایمیل به{" "}
-                <a
+                <Link
                   href={`mailto:${profile.email}`}
                   className="w-full hover:underline"
                 >
                   {profile.email}
-                </a>
+                </Link>
               </p>
             </div>
           </div>

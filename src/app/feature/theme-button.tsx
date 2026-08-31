@@ -33,7 +33,7 @@ export default function ThemeButton() {
     <button
       id="theme-toggle"
       type="button"
-      className="icon-btn"
+      className="icon-btn cursor-pointer"
       aria-label="تغییر تم"
       onClick={toggleTheme}
     >
