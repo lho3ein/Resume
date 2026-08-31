@@ -17,31 +17,6 @@ export default function Home() {
   const year = new Date().getFullYear();
 
   /* ─────────────────────────────────────────
-     Theme
-  ───────────────────────────────────────── */
-
-  // const [theme, setTheme] = useState<"dark" | "light">(() => {
-  //   if (typeof window === "undefined") return "light";
-  //   const stored = localStorage.getItem("resume-theme");
-  //   if (stored === "dark" || stored === "light") return stored;
-  //   return window.matchMedia("(prefers-color-scheme: dark)").matches
-  //     ? "dark"
-  //     : "light";
-  // });
-
-  // useEffect(() => {
-  //   document.documentElement.classList.toggle("dark", theme === "dark");
-
-  //   document.documentElement.style.setProperty("color-scheme", theme);
-
-  //   localStorage.setItem("resume-theme", theme);
-  // }, [theme]);
-
-  // const toggleTheme = () => {
-  //   setTheme((current) => (current === "dark" ? "light" : "dark"));
-  // };
-
-  /* ─────────────────────────────────────────
      Mobile Menu
   ───────────────────────────────────────── */
 
@@ -427,11 +402,11 @@ export default function Home() {
                 آماده همکاری
               </div>
 
-              <p className="mb-3 text-sm hero-item hero-delay-1 text-slate-500 dark:text-slate-400">
+              <p className="mb-2 text-sm hero-item hero-delay-1 text-slate-500 dark:text-slate-400">
                 سلام، من
               </p>
 
-              <h1 className="hero-item hero-delay-2 text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold leading-[1.15] tracking-tight text-slate-900 dark:text-white mb-4">
+              <h1 className="hero-item hero-delay-2 text-4xl sm:text-5xl lg:text-[3.25rem] font-extrabold leading-[1.15] tracking-tight text-slate-900 dark:text-white mb-3">
                 {profile.name}
               </h1>
 
@@ -444,7 +419,7 @@ export default function Home() {
                 </span>
               </p>
 
-              <p className="hero-item hero-delay-3 text-slate-500 dark:text-slate-400 text-base sm:text-lg leading-[1.6] mb-8 max-w-lg">
+              <p className="hero-item hero-delay-3 text-slate-500 dark:text-slate-400 text-base sm:text-lg leading-[1.55] mb-8 max-w-lg">
                 {profile.bio}
               </p>
 
@@ -481,7 +456,7 @@ export default function Home() {
                 </div>
 
                 <div className="stat-card">
-                  <div className="stat-value">+۴</div>
+                  <div className="stat-value">+۶</div>
                   <div className="stat-label">کارفرمای راضی</div>
                 </div>
               </div>
@@ -509,7 +484,7 @@ export default function Home() {
             <div className="flex justify-center order-1 w-full min-w-0 hero-item hero-delay-3 lg:order-2 lg:justify-end">
               <div className="profile-wrap">
                 <div className="profile-ring" />
-                <div className="relative glass-card p-6 w-full max-w-65 sm:max-w-70 mx-auto shadow-card">
+                <div className="relative glass-card p-6 w-full max-w-65 sm:max-w-70 mx-auto">
                   <div className="status-badge">
                     <span className="status-dot" />
                     آنلاین
@@ -526,9 +501,9 @@ export default function Home() {
                   </div>
 
                   <div className="mt-5 text-center">
-                    <p className="text-lg font-bold text-slate-900 dark:text-white">
+                    <h2 className="text-lg font-bold text-slate-900 dark:text-white">
                       {profile.name}
-                    </p>
+                    </h2>
 
                     <p className="mt-1 text-sm font-medium text-primary-600 dark:text-primary-400">
                       {profile.title}
@@ -847,8 +822,8 @@ export default function Home() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      width={400}
-                      height={208}
+                      fill
+                      sizes="(max-width: 640px) 100vw, 50vw"
                       className="project-image"
                     />
 

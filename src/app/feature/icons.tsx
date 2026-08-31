@@ -23,6 +23,7 @@ export const icons = {
       alt="Logo"
       width={56}
       height={28}
+      priority
       className="inline-block w-14 h-7"
     />
   ),
@@ -33,6 +34,7 @@ export const icons = {
       alt="Logo-dark"
       width={56}
       height={28}
+      priority
       className="inline-block w-14 h-7"
     />
   ),

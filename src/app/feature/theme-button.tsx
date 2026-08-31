@@ -37,7 +37,8 @@ export default function ThemeButton() {
       aria-label="تغییر تم"
       onClick={toggleTheme}
     >
-      {theme === "dark" ? icons.sun : icons.moon}
+      <span className="block dark:hidden">{icons.moon}</span>
+      <span className="hidden dark:block">{icons.sun}</span>
     </button>
   );
 }

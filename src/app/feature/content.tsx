@@ -129,7 +129,7 @@ export const projects = [
       "پورتفولیوی شخصی تعاملی با انیمیشن‌های روان، تم تاریک و روشن و طراحی واکنش‌گرا.",
     image: "/Resume-pic.webp",
     // image: projectImage("رزومه آنلاین", "#7c3aed", "#db2777"),
-    tags: ["Vite", "Tailwind", "Vanilla JS"],
+    tags: ["CSS", "Tailwind", "Next.js"],
     link: "#",
     blank: false,
   },
