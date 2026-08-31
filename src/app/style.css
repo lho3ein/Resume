@@ -181,7 +181,7 @@
   }
 
   .progress-fill {
-    @apply h-full transition-all duration-1000 ease-out rounded-full bg-gradient-to-l from-primary-500 to-accent-500;
+    @apply h-full transition-all duration-1000 ease-out rounded-full bg-linear-to-l from-primary-500 to-accent-500;
     width: 0;
   }
 
@@ -220,7 +220,7 @@
   }
 
   .project-overlay {
-    @apply absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent group-hover:opacity-100;
+    @apply absolute inset-0 flex flex-col justify-end p-6 transition-all duration-300 opacity-0 bg-linear-to-t from-slate-900 via-slate-900/50 to-transparent group-hover:opacity-100;
   }
 
   .profile-wrap {
