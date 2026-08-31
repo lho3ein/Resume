@@ -19,11 +19,11 @@ export const profile = {
 };
 
 export const navItems = [
-  { id: "hero", label: "خانه" },
-  { id: "skills", label: "مهارت‌ها" },
-  { id: "experience", label: "سوابق" },
-  { id: "projects", label: "پروژه‌ها" },
-  { id: "contact", label: "تماس" },
+  { id: "#hero", label: "خانه" },
+  { id: "#skills", label: "مهارت‌ها" },
+  { id: "#experience", label: "سوابق" },
+  { id: "#projects", label: "پروژه‌ها" },
+  { id: "#contact", label: "تماس" },
 ];
 
 export const skillTags = [
@@ -78,8 +78,6 @@ export const experiences = [
   },
 ];
 
-const svgFont = "Vazirmatn, Tahoma, sans-serif";
-
 function projectImage(title, color1, color2) {
   return (
     "data:image/svg+xml," +
@@ -92,8 +90,8 @@ function projectImage(title, color1, color2) {
       >
         <defs>
           <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style="stop-color:${color1}" />
-            <stop offset="100%" style="stop-color:${color2}" />
+            <stop offset="0%" stop-color={color1} />
+            <stop offset="100%" stop-color={color2} />
           </linearGradient>
         </defs>
         <rect fill="url(#g)" width="400" height="240" />
@@ -102,7 +100,7 @@ function projectImage(title, color1, color2) {
           y="125"
           text-anchor="middle"
           fill="white"
-          font-family="${svgFont}"
+          font-family="Vazirmatn, Tahoma, sans-serif"
           font-size="20"
         >
           {title}

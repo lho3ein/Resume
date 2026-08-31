@@ -18,20 +18,14 @@ export default function Home() {
      Theme
   ───────────────────────────────────────── */
 
-  const [theme, setTheme] = useState<"dark" | "light">("light");
-
-  useEffect(() => {
+  const [theme, setTheme] = useState<"dark" | "light">(() => {
+    if (typeof window === "undefined") return "light";
     const stored = localStorage.getItem("resume-theme");
-
-    const preferredTheme: "dark" | "light" =
-      stored === "dark" || stored === "light"
-        ? stored
-        : window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? "dark"
-          : "light";
-
-    setTheme(preferredTheme);
-  }, []);
+    if (stored === "dark" || stored === "light") return stored;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  });
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
@@ -351,7 +345,7 @@ export default function Home() {
                 <a
                   href={item.id}
                   className={`nav-link ${
-                    activeSection === item.id.slice(1) ? "nav-link-active" : ""
+                    activeSection === item.id ? "nav-link-active" : ""
                   }`}
                   data-section={item.id}
                   onClick={(e) => handleNavClick(e, item.id)}
@@ -404,7 +398,7 @@ export default function Home() {
                 <a
                   href={item.id}
                   className={`block nav-link ${
-                    activeSection === item.id.slice(1) ? "nav-link-active" : ""
+                    activeSection === item.id ? "nav-link-active" : ""
                   }`}
                   data-section={item.id}
                   onClick={(e) => handleNavClick(e, item.id)}
@@ -635,8 +629,7 @@ export default function Home() {
                         isRevealed(id) ? "visible" : ""
                       }`}
                       style={{
-                        transitionDelay: `${i * 40}ms,
-                      `,
+                        transitionDelay: `${i * 40}ms`,
                       }}
                     >
                       {tag}
@@ -677,8 +670,7 @@ export default function Home() {
                         isRevealed(revealId) ? "visible" : ""
                       }`}
                       style={{
-                        transitionDelay: `${i * 70}ms,
-                      `,
+                        transitionDelay: `${i * 70}ms`,
                       }}
                     >
                       <div className="flex justify-between mb-2">
@@ -702,8 +694,7 @@ export default function Home() {
                           }`}
                           style={
                             {
-                              "--progress": `${skill.level}%,
-                          `,
+                              "--progress": `${skill.level}%`,
                             } as React.CSSProperties
                           }
                         />
@@ -762,8 +753,7 @@ export default function Home() {
                     isRevealed(revealId) ? "visible" : ""
                   }`}
                   style={{
-                    transitionDelay: `${i * 100}ms,
-                  `,
+                    transitionDelay: `${i * 100}ms`,
                   }}
                 >
                   <div className="timeline-dot" />
@@ -854,8 +844,7 @@ export default function Home() {
                     isRevealed(revealId) ? "visible" : ""
                   }`}
                   style={{
-                    transitionDelay: `${i * 80}ms,
-                  `,
+                    transitionDelay: `${i * 80}ms`,
                   }}
                 >
                   <div className="project-image-wrap">
