@@ -24,3 +24,66 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* tailwind config */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Vazirmatn", "Tahoma", sans-serif;
+
+  --color-primary-50: #f0f4ff;
+  --color-primary-100: #e0eaff;
+  --color-primary-200: #c7d7fe;
+  --color-primary-300: #a4bcfd;
+  --color-primary-400: #8098f9;
+  --color-primary-500: #6172f3;
+  --color-primary-600: #444ce7;
+  --color-primary-700: #3538cd;
+  --color-primary-800: #2d31a6;
+  --color-primary-900: #2d3282;
+  --color-primary-950: #1f235b;
+
+  --color-accent-400: #38bdf8;
+  --color-accent-500: #0ea5e9;
+  --color-accent-600: #0284c7;
+
+  --color-surface-light: rgba(255, 255, 255, 0.72);
+  --color-surface-dark: rgba(17, 24, 39, 0.78);
+
+  --blur-glass: 20px;
+
+  --shadow-glass: 0 4px 24px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+
+  --shadow-glass-dark:
+    0 4px 24px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+
+  --shadow-glow: 0 0 48px rgba(68, 76, 231, 0.18);
+
+  --shadow-card: 0 20px 60px -12px rgba(68, 76, 231, 0.15);
+
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-gradient-shift: gradientShift 8s ease infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradientShift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
