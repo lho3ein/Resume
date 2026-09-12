@@ -62,7 +62,7 @@ export const experiences = [
     tags: ["React", "Nextjs", "TypeScript", "Tailwind"],
   },
   {
-    period: "۱۴۰۲ — ۱۴۰۴",
+    period: "۱۴۰۳ — ۱۴۰۴",
     role: "Front-End Developer (Reactjs)",
     company: "Nexora Technologist",
     description:
