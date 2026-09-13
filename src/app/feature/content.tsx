@@ -111,6 +111,7 @@ export const projects = [
       "postgreSQL",
     ],
     link: "https://shop-lho3ein.vercel.app/",
+    blank: true,
   },
   {
     title: "پنل مدیریت CRM",
