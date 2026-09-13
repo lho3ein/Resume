@@ -107,14 +107,23 @@ export const projects = [
     blank: true,
   },
   {
-    title: "سیستم احراز هویت",
+    title: "سیستم گردش کار",
     description:
-      "سیستم احراز هویت Full-stack که قابلیت ثبت نام کاربر جدید و ورود را دارد و به دیتابیس متصل است و قابلیت ورود با Github و Google را دارد",
-    image: projectImage("سیستم احراز هویت", "#0284c7", "#059669"),
-    tags: ["Next.js", "Auth.js", "TypeScript", "Prisma"],
-    link: "https://github.com/lho3ein/",
+      "سیستم گردش کار Full-stack که قابلیت ثبت نام کاربر جدید و ورود را دارد و به دیتابیس متصل است و قابلیت ورود با Github و Google را دارد",
+    image: "/workflow.webp",
+    tags: ["Next.js", "Auth.js", "TypeScript", "Prisma", "MySQL"],
+    link: "https://workflow-nextjs-gamma-eight.vercel.app/",
     blank: true,
   },
+  // {
+  //   title: "سیستم احراز هویت",
+  //   description:
+  //     "سیستم احراز هویت Full-stack که قابلیت ثبت نام کاربر جدید و ورود را دارد و به دیتابیس متصل است و قابلیت ورود با Github و Google را دارد",
+  //   image: projectImage("سیستم احراز هویت", "#0284c7", "#059669"),
+  //   tags: ["Next.js", "Auth.js", "TypeScript", "Prisma"],
+  //   link: "https://github.com/lho3ein/",
+  //   blank: true,
+  // },
   {
     title: "فروشگاه آنلاین",
     description:
