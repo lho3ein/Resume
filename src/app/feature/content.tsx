@@ -128,9 +128,17 @@ export const projects = [
     title: "فروشگاه آنلاین",
     description:
       "فروشگاه آنلاین با سبد خرید، درگاه پرداخت و پنل مدیریت کامل برای فروشندگان.",
-    image: projectImage("فروشگاه آنلاین", "#7c3aed", "#db2777"),
-    tags: ["Next.js", "TypeScript", "React-Query", "Shadcn", "Prisma"],
-    link: "https://github.com/lho3ein/",
+    // image: projectImage("فروشگاه آنلاین", "#7c3aed", "#db2777"),
+    image: "/ecommerce.webp",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Shadcn",
+      "Prisma",
+      "zustand",
+      "postgreSQL",
+    ],
+    link: "https://shop-lho3ein.vercel.app/",
   },
   {
     title: "رزومه آنلاین",
