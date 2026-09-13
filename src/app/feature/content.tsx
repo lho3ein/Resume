@@ -97,6 +97,22 @@ function projectImage(title: string, color1: string, color2: string) {
 
 export const projects = [
   {
+    title: "فروشگاه آنلاین",
+    description:
+      "فروشگاه آنلاین با سبد خرید، درگاه پرداخت و پنل مدیریت کامل برای فروشندگان.",
+    // image: projectImage("فروشگاه آنلاین", "#7c3aed", "#db2777"),
+    image: "/ecommerce.webp",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Shadcn",
+      "Prisma",
+      "zustand",
+      "postgreSQL",
+    ],
+    link: "https://shop-lho3ein.vercel.app/",
+  },
+  {
     title: "پنل مدیریت CRM",
     description:
       "فروشگاه آنلاین با سبد خرید، درگاه پرداخت و پنل مدیریت کامل برای فروشندگان.",
@@ -115,31 +131,6 @@ export const projects = [
     link: "https://workflow-nextjs-gamma-eight.vercel.app/",
     blank: true,
   },
-  // {
-  //   title: "سیستم احراز هویت",
-  //   description:
-  //     "سیستم احراز هویت Full-stack که قابلیت ثبت نام کاربر جدید و ورود را دارد و به دیتابیس متصل است و قابلیت ورود با Github و Google را دارد",
-  //   image: projectImage("سیستم احراز هویت", "#0284c7", "#059669"),
-  //   tags: ["Next.js", "Auth.js", "TypeScript", "Prisma"],
-  //   link: "https://github.com/lho3ein/",
-  //   blank: true,
-  // },
-  {
-    title: "فروشگاه آنلاین",
-    description:
-      "فروشگاه آنلاین با سبد خرید، درگاه پرداخت و پنل مدیریت کامل برای فروشندگان.",
-    // image: projectImage("فروشگاه آنلاین", "#7c3aed", "#db2777"),
-    image: "/ecommerce.webp",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Shadcn",
-      "Prisma",
-      "zustand",
-      "postgreSQL",
-    ],
-    link: "https://shop-lho3ein.vercel.app/",
-  },
   {
     title: "رزومه آنلاین",
     description:
@@ -150,6 +141,16 @@ export const projects = [
     link: "#",
     blank: false,
   },
+  // {
+  //   title: "سیستم احراز هویت",
+  //   description:
+  //     "سیستم احراز هویت Full-stack که قابلیت ثبت نام کاربر جدید و ورود را دارد و به دیتابیس متصل است و قابلیت ورود با Github و Google را دارد",
+  //   image: projectImage("سیستم احراز هویت", "#0284c7", "#059669"),
+  //   tags: ["Next.js", "Auth.js", "TypeScript", "Prisma"],
+  //   link: "https://github.com/lho3ein/",
+  //   blank: true,
+  // },
+
   // {
   //    title: "دفترچه تلفن",
   //    description: "ابزاری برای مدیریت پروژه با قابلیت کشیدن و رها کردن کارت‌ها، همگام‌سازی لحظه‌ای و کار آفلاین.",
